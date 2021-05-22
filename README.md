@@ -58,8 +58,8 @@ __Example:__ <br>
 The code has been developed in Jupyter Notebook and tested in the terminal on Jupyter Hub on worker02. I therefore recommend cloning the Github repository to worker02 and running the scripts from there. 
 
 ### Results:
-The results of the network analysis show that ... <br>
-However, inspecting the weighted edgelist we see that coreference appear to be a big problem <br>
+The results of the network analysis can be seen in the output and viz folders. Looking at the centrality measures one can see three measures: degree, betweenness and eigenvector centrality. These measures refer to how central the persons are to the network. The most central person seems to be Clinton as it is the node with the most edges/ties (degree centrality = 0.79). Similarly, it is the most important node for the flow of the network since it is the one that best connects many of the other nodes (betweenness centrality = 0.73). Lastly, it is also the node connected to the most central nodes in the network (eigenvector centrality = 0.53). <br>
+However, in the csv file of the centrality measures the problem of coreference becomes very apparent. For instance, Hillary Clinton is referred to as “Hillary Rodham Clinton”, “Hillary Clinton”, “Hillary Rodham”, “Hillary”, “Hillary Clinton’s”, “Rodham”, “Clintons” and “Clinton” (which might also refer to Bill Clinton). As these are all connected to the Clinton node this greatly influence the results of the analysis as they all refer to the same person and therefore should constitute only one node and not eight. The only way to solve this problem is to resolve all mentions of the same person entity within a document. <br>
 
 Here, you can see what the network looks like without labels:
 ![alt text](https://github.com/miemartinez/NetworkAnalysis/blob/main/viz/network.png?raw=true)
