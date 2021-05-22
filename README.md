@@ -10,7 +10,7 @@ as a CSV in a folder called output. <br>
 
 A weighted edgelist of the data fake-or-real-news.csv (from Kaggle https://www.kaggle.com/rchitic17/real-or-fake) can be found in the data folder.
 Using spacy, all mentions of persons was extracted and it was counted how many times two names co-occured. 
-So, the weighted edgelist hold the name of two people and number of times they cooccured in a document.
+So, the weighted edgelist hold the name of two people (nodeA and nodeB) and number of times they co-occured in a document (weight).
 
 The script is located in the src folder and can be run without specifying further parameters. 
 The repository also contains the results from running the network analysis. 
